@@ -1,0 +1,17 @@
+/* HighlightText.module.css */
+.highlightText {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* This ensures that the highlight doesn't extend beyond the text */
+}
+
+.highlightText::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  background-color: #A8D1FF;
+  z-index: 0; /* Set z-index to 0 instead of -1 */
+  animation: highlighter 2s forwards;
+}

@@ -1,0 +1,64 @@
+@tailwind base;
+
+textarea::placeholder {
+  color: black;
+  font-size: 15px;
+}
+
+input::placeholder {
+  color: black;
+}
+
+/* styles.css */
+
+@keyframes gradient {
+  to {
+    background-position: -200% 100%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-595px, 0px);
+  }
+  20% {
+    transform: translate(133px, 0px);
+  }
+  35% {
+    transform: translate(333px, -70px);
+  }
+  50% {
+    transform: translate(133px, -133px);
+  }
+  70% {
+    transform: translate(-595px, -133px);
+  }
+  85% {
+    transform: translate(-795px, -70px);
+  }
+  100% {
+    transform: translate(-595px, 0px);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-none rounded-md;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply  rounded-tl-lg rounded-bl-lg h-[11px];
+  }
+}
